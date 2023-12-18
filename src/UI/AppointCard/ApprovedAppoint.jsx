@@ -10,10 +10,9 @@ import pat1 from "../../assets/images/pat1.avif";
 import pat2 from "../../assets/images/pat2.avif";
 import pat3 from "../../assets/images/pat3.avif";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { VideoCall } from "@mui/icons-material";
 
-const DocSec = ({ data, setFresh, fresh }) => {
+const DocSec = ({ data }) => {
   const [PatData, setPatData] = useState();
   useEffect(() => {
     axios
@@ -24,47 +23,6 @@ const DocSec = ({ data, setFresh, fresh }) => {
       })
       .catch((err) => console.log(err));
   }, [data]);
-
-  const DeleteBooking = () => {
-    axios
-      .delete(
-        `http://localhost:5000/onlineBooking/deleteBooking/${data?.onlineConsultId}`
-      )
-      .then((res) => {
-        toast.error("Appointment Deleted !", {
-          position: toast.POSITION.TOP_RIGHT,
-        });
-        setFresh(!fresh);
-        console.log(res.data.data);
-        // setPatData(res.data.data);
-      })
-      .catch((err) => {
-        toast.error("Error !", {
-          position: toast.POSITION.TOP_RIGHT,
-        });
-        console.log(err);
-      });
-  };
-  const AcceptBooking = () => {
-    axios
-      .get(
-        `http://localhost:5000/onlineBooking/AcceptBooking/${data?.onlineConsultId}`
-      )
-      .then((res) => {
-        toast.success("Appointment Confirmed !", {
-          position: toast.POSITION.TOP_RIGHT,
-        });
-        setFresh(!fresh);
-        console.log(res.data.data);
-        // setPatData(res.data.data);
-      })
-      .catch((err) => {
-        toast.error("Error !", {
-          position: toast.POSITION.TOP_RIGHT,
-        });
-        console.log(err);
-      });
-  };
   console.log(data, PatData);
   return (
     <div className={classes.DocSec}>
@@ -113,26 +71,10 @@ const DocSec = ({ data, setFresh, fresh }) => {
       </div>
 
       <div className={classes.ButtonSec}>
-        <IconButton
-          clicked={() => {
-            AcceptBooking();
-          }}
-          id="check"
-          passedClass={classes.ProfileButton2}
-        >
-          Accept
+        <IconButton id="none" passedClass={classes.ProfileButton3}>
+          <VideoCall />
+          Start Meeting
         </IconButton>
-
-        <IconButton
-          clicked={() => {
-            DeleteBooking();
-          }}
-          id="cross"
-          passedClass={classes.Button3}
-        >
-          Reject
-        </IconButton>
-        <ToastContainer />
       </div>
     </div>
   );

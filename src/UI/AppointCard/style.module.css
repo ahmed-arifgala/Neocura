@@ -14,9 +14,172 @@
 }
 
 .headMain {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   @media (max-width: 425px) {
-    font-size: 18px;
+    font-size: 16px;
   }
+}
+
+.DocSec {
+  width: 75%;
+  border: 2px solid #6bb4c5;
+  padding: 1% 2%;
+  background-color: white;
+  box-shadow: 3px 4px 4px rgb(123, 176, 184);
+  border-radius: 8px;
+  margin-bottom: 2%;
+  transition: border-color 0.3s ease;
+  display: grid;
+  grid-template-areas:
+    "dsi dsi dsi   b"
+    "lcs lcs lcs  lcs";
+}
+
+.DocSec h3 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.DocSec:hover {
+  border: 2px solid #2e4b86;
+  animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+  0% {
+    border-color: #2e4b86;
+  }
+  50% {
+    border-color: #6bb4c5;
+  }
+  100% {
+    border-color: #2e4b86;
+  }
+}
+
+.DocSecInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+  width: 80%;
+  grid-area: dsi;
+}
+
+.Image {
+  margin-right: 5%;
+  margin-top: 3%;
+  background-color: #6bb4c5;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.Image img {
+  width: 100px;
+  height: 100px;
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.Info h1 {
+  margin-bottom: 4%;
+  font-size: 20px;
+}
+
+.Info h3 {
+  font-weight: normal;
+  margin: 2px;
+  font-size: 14px;
+}
+
+.ExtraInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  margin-top: 5%;
+}
+
+.ExtraInfo div {
+  padding: 0px 15px;
+  border-right: 1px solid rgb(173, 169, 169);
+}
+
+.ExtraInfo div:last-child {
+  border-right: none;
+}
+
+.ExtraInfo h3 {
+  color: rgb(82, 78, 78);
+  font-size: 14px;
+}
+
+.ExtraInfo p {
+  font-size: 12px;
+}
+
+.LocCardSec {
+  grid-area: lcs;
+  display: flex;
+  overflow: auto;
+  margin-bottom: 0;
+  padding-bottom: 0px;
+}
+
+.LocCardSec::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: transparent;
+}
+
+.LocCardSec::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.LocCardSec::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.LocCardSec::-webkit-scrollbar-thumb:hover {
+  background-color: transparent;
+}
+
+.ButtonSec {
+  /* grid-area: b; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 0%;
+  /* padding-left: 10%; */
+}
+
+.Button2 > button {
+  color: white !important;
+  background-color: #000066 !important;
+}
+
+.Button3 > button {
+  color: white !important;
+  background-color: red !important;
+}
+
+.ProfileButton > button:hover {
+  color: #000066 !important;
+  background-color: white !important;
+}
+.ProfileButton3 > button {
+  color: white !important;
+  background-color: green !important;
+}
+.ProfileButton2 > button:hover {
+  color: green !important;
+  background-color: white !important;
 }

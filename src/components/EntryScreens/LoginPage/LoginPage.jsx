@@ -36,7 +36,13 @@ const LoginPage = () => {
           });
           localStorage.setItem("accessToken", response.data.accesToken);
           localStorage.setItem("userType", response.data.type);
-          localStorage.setItem("name", response.data.data.name);
+          localStorage.setItem(
+            "userId",
+            response.data.data.patientId ||
+              response.data.data.docId ||
+              response.data.data.id
+          );
+          localStorage.setItem("userData", JSON.stringify(response.data.data));
 
           setTimeout(() => {
             if (response.data.type == "admin") {

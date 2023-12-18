@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
-import AppointCard from "../../../../UI/AppointCard";
+import AppointCard from "../../../../UI/AppointCard/PatientApprovedAppoint";
 import axios from "axios";
 import nodataGif from "../../../../assets/images/NoData.gif";
-const Requests = () => {
+const Approved = () => {
   const [data, setData] = useState();
-  const [fresh, setFresh] = useState();
   const userId = localStorage.getItem("userId");
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/onlineBooking/getAll/${userId}`)
+      .get(`http://localhost:5000/onlineBooking/getApprovedForPat/${userId}`)
       .then((res) => {
         console.log(res.data.data);
         setData(res.data.data);
       })
       .catch((err) => console.log(err));
-  }, [fresh]);
+  }, []);
   return (
     <div
       style={{
@@ -29,7 +28,7 @@ const Requests = () => {
         backgroundColor: "inherit",
       }}
     >
-      <h1>Appointment Requests</h1>
+      <h1>Appointments Approved</h1>
       <div
         style={{
           width: "100%",
@@ -40,9 +39,7 @@ const Requests = () => {
       >
         {data?.length > 0 ? (
           data?.map((item, ind) => {
-            return (
-              <AppointCard data={item} setFresh={setFresh} fresh={fresh} />
-            );
+            return <AppointCard data={item} />;
           })
         ) : (
           <div
@@ -57,7 +54,7 @@ const Requests = () => {
             }}
           >
             <img src={nodataGif} alt="gif" height={300} width={300} />
-            <h2>You have no Requests</h2>
+            <h2>You have no Approved Requests</h2>
           </div>
         )}
       </div>
@@ -65,4 +62,4 @@ const Requests = () => {
   );
 };
 
-export default Requests;
+export default Approved;

@@ -9,22 +9,14 @@ import { Link } from "react-router-dom";
 import pat1 from "../../assets/images/pat1.avif";
 import pat2 from "../../assets/images/pat2.avif";
 import pat3 from "../../assets/images/pat3.avif";
-import axios from "axios";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const DocSec = ({ data, setFresh, fresh }) => {
-  const [PatData, setPatData] = useState();
-  useEffect(() => {
-    axios
-      .get(`http://localhost:5000/getPatientById/${data?.patId}`)
-      .then((res) => {
-        console.log(res.data.data);
-        setPatData(res.data.data);
-      })
-      .catch((err) => console.log(err));
-  }, [data]);
-
+  console.log(data, "jkbkb");
+  const [DocData, setDocData] = useState();
   const DeleteBooking = () => {
     axios
       .delete(
@@ -45,38 +37,26 @@ const DocSec = ({ data, setFresh, fresh }) => {
         console.log(err);
       });
   };
-  const AcceptBooking = () => {
+  useEffect(() => {
     axios
-      .get(
-        `http://localhost:5000/onlineBooking/AcceptBooking/${data?.onlineConsultId}`
-      )
+      .get(`http://localhost:5000/getDoctorById/${data?.platDocId}`)
       .then((res) => {
-        toast.success("Appointment Confirmed !", {
-          position: toast.POSITION.TOP_RIGHT,
-        });
-        setFresh(!fresh);
         console.log(res.data.data);
-        // setPatData(res.data.data);
+        setDocData(res.data.data);
       })
-      .catch((err) => {
-        toast.error("Error !", {
-          position: toast.POSITION.TOP_RIGHT,
-        });
-        console.log(err);
-      });
-  };
-  console.log(data, PatData);
+      .catch((err) => console.log(err));
+  }, [data]);
   return (
     <div className={classes.DocSec}>
       <div className={classes.DocSecInfo}>
         <div className={classes.Image}>
           <img
             src={
-              PatData?.img == "pat1"
-                ? pat1
-                : PatData?.img == "pat2"
-                ? pat2
-                : pat3
+              DocData?.docImg == "doc33"
+                ? doc33
+                : DocData?.docImg == "doc44"
+                ? doc44
+                : doc111
             }
             alt="Doctor's Image"
           />
@@ -92,7 +72,7 @@ const DocSec = ({ data, setFresh, fresh }) => {
           }}
         >
           <div>
-            <h1 style={{ fontSize: "22px" }}>{PatData?.name}</h1>
+            <h1 style={{ fontSize: "22px" }}>Dr. {DocData?.name}</h1>
           </div>
 
           <div className={classes.ExtraInfo}>
@@ -104,10 +84,6 @@ const DocSec = ({ data, setFresh, fresh }) => {
               <h3>Time</h3>
               <p>{data?.Time}</p>
             </div>
-            <div>
-              <h3>Contact</h3>
-              <p>{PatData?.phoneNumber}</p>
-            </div>
           </div>
         </div>
       </div>
@@ -115,22 +91,12 @@ const DocSec = ({ data, setFresh, fresh }) => {
       <div className={classes.ButtonSec}>
         <IconButton
           clicked={() => {
-            AcceptBooking();
-          }}
-          id="check"
-          passedClass={classes.ProfileButton2}
-        >
-          Accept
-        </IconButton>
-
-        <IconButton
-          clicked={() => {
             DeleteBooking();
           }}
           id="cross"
           passedClass={classes.Button3}
         >
-          Reject
+          Cancel
         </IconButton>
         <ToastContainer />
       </div>

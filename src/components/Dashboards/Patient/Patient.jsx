@@ -11,38 +11,48 @@ import ReviewsIcon from "@mui/icons-material/Reviews";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { Routes, Route, useNavigate, Link } from "react-router-dom";
 import Setting from "./Screens/Setting";
-import Reviews from "./Screens/Reviews";
-import OnlineAppointments from "./Screens/OnlineAppointments";
-import AllAppointments from "./Screens/AllAppointments";
+import ApprovedAppoints from "./Screens/ApprovedAppoints";
+import History from "./Screens/History";
 import Profile from "./Screens/Profile";
 import TodaysAppointment from "./Screens/TodaysAppointment";
 import Welcome from "./Screens/Welcome";
 import logo from "../../../assets/images/HomeImages/logo.png";
+import Requests from "./Screens/Requests";
 
-const Admin = () => {
+import pat1 from "../../../assets/images/pat1.avif";
+import pat2 from "../../../assets/images/pat2.avif";
+import pat3 from "../../../assets/images/pat3.avif";
+const Patient = () => {
   const [selected, setSelected] = useState(0);
   const Navigate = useNavigate();
+  const data = localStorage.getItem("userData");
+  const UserData = JSON.parse(data);
+
   const NavItems = [
     { name: "Profile", icon: <AccountCircleIcon />, path: "profile" },
+    // {
+    //   name: "Todays Appointment",
+    //   icon: <EventIcon />,
+    //   path: "todayAppointments",
+    // },
     {
-      name: "Todays Appointment",
-      icon: <EventIcon />,
-      path: "todayAppointments",
-    },
-    {
-      name: "All Appointment",
-      icon: <CalendarMonthIcon />,
-      path: "allAppointments",
-    },
-    {
-      name: "Online Appointments",
+      name: "Requested Appoint",
       icon: <DuoIcon />,
-      path: "onlineAppointments",
+      path: "appoint-requests",
     },
-    { name: "Reviews", icon: <ReviewsIcon />, path: "reviews" },
+    {
+      name: "Approved Appoints",
+      icon: <ReviewsIcon />,
+      path: "approved-appointments",
+    },
+    {
+      name: "Appointment History",
+      icon: <CalendarMonthIcon />,
+      path: "appoint-history",
+    },
+
     { name: "Settings", icon: <SettingsIcon />, path: "settings" },
   ];
-
   return (
     <>
       <div className={classes.Container}>
@@ -52,8 +62,17 @@ const Admin = () => {
               <img src={logo} className={classes.logo} />{" "}
             </Link>
             <div className={classes.InfoBox}>
-              <img src={pic} className={classes.img} />
-              <p>{localStorage.getItem("name")}</p>
+              <img
+                src={
+                  UserData?.img == "pat1"
+                    ? pat1
+                    : UserData?.img == "pat2"
+                    ? pat2
+                    : pat3
+                }
+                className={classes.img}
+              />
+              <p>{UserData.name}</p>
             </div>
             <div className={classes.NavBox}>
               {NavItems.map((e, i) => (
@@ -99,9 +118,12 @@ const Admin = () => {
             {/* <Route path="/" element={<Welcome />} /> */}
             <Route path="profile" element={<Profile />} />
             <Route path="todayAppointments" element={<TodaysAppointment />} />
-            <Route path="allAppointments" element={<AllAppointments />} />
-            <Route path="onlineAppointments" element={<OnlineAppointments />} />
-            <Route path="reviews" element={<Reviews />} />
+            <Route path="appoint-history" element={<History />} />
+            <Route path="appoint-requests" element={<Requests />} />
+            <Route
+              path="approved-appointments"
+              element={<ApprovedAppoints />}
+            />
             <Route path="settings" element={<Setting />} />
           </Routes>
         </div>
@@ -110,4 +132,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Patient;

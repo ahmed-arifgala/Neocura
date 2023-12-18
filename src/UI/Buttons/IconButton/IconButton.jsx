@@ -10,7 +10,11 @@ const Button = (props) => {
   return (
     <div className={classNames.join(" ")}>
       <button onClick={props.clicked}>
-        {!props.id == "check" && !props.id == "cross" && (
+        {!(
+          props.id == "check" ||
+          props.id == "none" ||
+          props.id == "cross"
+        ) && (
           <img
             src={props.id == "consultation" ? consultation : profile}
             alt="icon"
