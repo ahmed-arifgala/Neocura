@@ -1,0 +1,9 @@
+.DetailInfoSec{
+  background-color: white;
+  margin-top: 6%;
+  padding: 3% 0%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

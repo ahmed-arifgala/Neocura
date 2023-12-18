@@ -1,0 +1,16 @@
+.HosRightSide{
+    width: auto;
+
+}
+
+
+.Modal{
+    font-size: 80%;    
+    display: flex;
+    justify-content: center;
+}
+
+.Modal>table{
+    width:40%;
+}
+

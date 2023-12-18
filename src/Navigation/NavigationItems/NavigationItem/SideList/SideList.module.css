@@ -1,0 +1,35 @@
+.SideList {
+    padding-left: 8%;
+    line-height: 1.5em;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+  
+.Open {
+    animation: opacityAnimation 0.3s ease-in-out forwards;
+}
+  
+@keyframes opacityAnimation {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
+  
+.SideList li {
+    font-size: 13px;
+}
+
+.SideList a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.SideList a:hover {
+    color: white !important;
+}
+  

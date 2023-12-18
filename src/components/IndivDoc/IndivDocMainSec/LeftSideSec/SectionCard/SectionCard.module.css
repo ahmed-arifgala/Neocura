@@ -1,0 +1,23 @@
+.SectionCard{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #2e4b86;
+    padding: 4% 0%;
+}
+
+.SectionCard h1{
+    margin:0;
+    margin-bottom: 2%;
+}
+
+.SectionCard ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.listItems ul{
+    display: flex;
+    flex-wrap: wrap;
+}

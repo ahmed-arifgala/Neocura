@@ -1,0 +1,27 @@
+.ReviewPost{
+    margin-bottom: 5%;
+    border: 1px solid  #2e4b86;
+    border-radius: 14px;
+    padding:3%;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.ReviewPost h2{
+    margin:0px;
+    margin-bottom: 5px;
+}
+
+.ReviewPost p:not(:last-child){
+    margin: 0;
+    font-size: 75%;
+    color: rgb(119, 115, 115);
+}
+
+p.Review{
+    font-size: 87.5%;
+    margin-top: 3%;
+    line-height: 1.5em;
+}
+
+
+

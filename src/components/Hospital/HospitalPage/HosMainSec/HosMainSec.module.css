@@ -1,0 +1,17 @@
+.HosMainSec{
+    display: flex;
+    
+}
+
+.RightSide{
+    width:25%;
+    margin-right:5%;
+}
+
+.HosMainSec h1{
+    font-size: 140%;
+}
+
+.HosMainSec p{
+    font-size: 80%;
+}

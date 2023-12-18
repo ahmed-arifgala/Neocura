@@ -1,0 +1,42 @@
+.ParentContainer{
+    padding:100px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+.ParentContainer h1{
+    text-align:center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+.ParentContainer img{
+    width:100%;
+    height:auto;
+    border-radius: 12px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.content h2{
+    margin-top:20px
+}
+.content p{
+    margin-top:10px;
+    color:gray
+
+}
+
+
+.content ol li{
+    margin-left:40px;
+}
+
+.content img{
+    width:490px;
+    display:flex;
+    object-fit: cover;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}

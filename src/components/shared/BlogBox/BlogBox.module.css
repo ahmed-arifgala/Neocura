@@ -1,0 +1,124 @@
+.ParentBox{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.links{
+    all:unset;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    border:1px solid lightgray;
+    height: 300px;
+    width:360px;
+    background-color: white;
+    border-radius:3px;
+    -webkit-box-shadow: 10px 11px 30px -7px rgba(0,0,0,0.69);
+    -moz-box-shadow: 10px 11px 30px -7px rgba(0,0,0,0.69);
+    box-shadow: 10px 11px 30px -7px rgba(0,0,0,0.69);
+}
+.container2{
+    display:flex;
+    flex-direction: row;
+    border:1px solid lightgray;
+    height: 320px;
+    width:700px;
+    background-color: antiquewhite;
+    border-radius:3px;
+    -webkit-box-shadow: 10px 11px 30px -7px rgba(0,0,0,0.69);
+    -moz-box-shadow: 10px 11px 30px -7px rgba(0,0,0,0.69);
+    box-shadow: 10px 11px 30px -7px rgba(0,0,0,0.69);
+}
+.saveIcon,.unSaveIcon:hover{
+    cursor: pointer;
+}
+.ContentPara{
+    margin-top:4px;
+    overflow: hidden;
+    color:gray;
+    text-align: justify;
+    font-size: 16px;
+}
+.saveIcon{
+    background-image: url("../../../assets/images/save-icon.png");
+    width:30px;
+    height: 30px;
+    background-size: cover;
+    border:none;
+    background-repeat: no-repeat;
+  }
+.unSaveIcon{
+    background-image: url("../../../assets/images/unsave-icon.png");
+    width:30px;
+    height: 30px;
+    background-size: cover;
+    border:none;
+    background-repeat: no-repeat;
+  }
+.BlogImage{
+    height:180px;
+    width:100%;
+    object-position: contain;
+}
+.BlogImage2{
+    height:100%;
+    width:58%;
+    object-position: contain;
+}
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.textContainer2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.title{
+    font-size:20px;
+    margin-bottom: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.author{
+    font-size:16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.dateRead{
+    display: flex;
+    color:gray;
+    gap:30px;
+    width:100%;
+    font-size:14px;
+}
+.dateRead2{
+    display: flex;
+    color:black;
+    justify-content: space-between;
+    width:100%;
+    font-size:16px;
+    margin-bottom: 10px;
+}
+.bottomPart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.container:hover{
+    transform:scale(1.01);
+    cursor: pointer;
+    transition-duration: 300ms;
+    opacity: 0.8;
+}
+.container2:hover{
+    transform:scale(1.01);
+    cursor: pointer;
+    transition-duration: 300ms;
+    opacity: 0.8;
+}

@@ -1,0 +1,105 @@
+.LocationSec {
+    box-shadow:
+    0 0 3px rgb(141, 164, 168),
+    0 0 6px rgb(141, 164, 168),
+    0 0 9px rgb(141, 164, 168),
+    0 0 12px rgb(141, 164, 168);
+    padding: 5%;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+    border: 2px solid transparent; 
+}
+
+.LocationSec:hover {
+    border: 2px solid #2e4b86;
+    animation: pulse-border 2s infinite;
+
+}
+
+@keyframes pulse-border {
+0% {
+  border-color: #2e4b86;
+}
+50% {
+  border-color: #58a6d5;
+}
+100% {
+  border-color: #2e4b86;
+}
+}
+
+
+.Time{
+    padding-left:6%;
+    text-align: right;
+}
+
+.Day{
+    text-align: left;
+    font-weight: bold;
+}
+
+.Table{
+    width: 100%;
+    font-size: 80%;
+}
+
+.Table > tr{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6%;
+    padding-top: 6%;
+    border-bottom: 1px solid #77737354;
+    padding-right: 0%;
+}
+
+.LocationSec > p, .LocationSec >h1 {
+    width:100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.Light{
+    color:#777373;
+}
+
+tr.Center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.OpenTimeTable{
+    font-style: italic;
+    text-align: center;
+    text-decoration: underline;
+    /* text-shadow: 1px 1px 2px #777373; */
+    transition: transform 0.3 ease, color 0.3 ease;
+}
+
+.OpenTimeTable:hover{
+    cursor: pointer;
+    color: #2e4b86;
+    transform: scale(1.1);
+}
+
+.Modal{
+    font-size: 80%;    
+    display: flex;
+    justify-content: center;
+}
+
+.Modal>table{
+    width:40%;
+}
+
+
+.Button>button{
+    width:80% !important;
+    margin-top:8%;
+}

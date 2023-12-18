@@ -1,0 +1,106 @@
+.detailInfo {
+
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(236, 248, 248);
+    padding: 0% 2%;
+    margin-bottom: 2%;
+    border: 0.2rem solid;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear 2 forwards;
+    border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear 2 forwards;
+}
+
+.detailInfo:not(:hover) {
+    animation: none;
+  }
+
+.detailInfo>p:first-child{
+    font-weight: 700;
+    position: relative;
+    padding:1% 0%;
+    margin-bottom: 1.5%;    
+}
+
+.detailInfo>p:first-child::after{
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    width: 55%;
+    height: 1px;
+    background-color:#9696968e
+}
+
+.Answer{
+    line-height: 1.7em;
+    font-size: 14px;
+    display: none;
+    margin:0;
+    transition: opacity 0.3s ease;
+    padding-bottom: 1%;
+    padding-left: 3%;
+
+}
+
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+    --c1: rgb(11, 80, 95);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}

@@ -1,0 +1,16 @@
+.IndivDocMainSec{
+    display: flex;
+}
+
+.IndivDocMainSec h1{
+    font-size: 140%;
+}
+
+.IndivDocMainSec p{
+    font-size: 80%;
+}
+
+.RightSideSec{
+
+    width:25%;
+}

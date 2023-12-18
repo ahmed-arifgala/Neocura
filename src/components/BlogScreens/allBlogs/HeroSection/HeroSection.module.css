@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@font-face{
+    font-family: 'AnzianoRegular';
+    src:url('../../../../assets/fonts/Anziano-Regular.otf')  format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: auto;
+  }
+
+*{
+    margin:0;
+    padding:0
+}
+
+.heroBg{
+    width:100%;
+    margin-top: 20px;
+    height:416px;
+    background-color: antiquewhite;
+}
+.heroMainBox{
+    display: flex;
+    justify-content: space-between;
+}
+.heroPic{
+    height:460px;
+    width:auto;
+}
+.heroText{
+    margin-top: 100px;
+    font-family: "Dancing Script";
+}
+.heroText h1{
+    color:darkblue;
+    font-weight: bold;
+    font-size:54px
+}
+.heroText p{
+    font-size: 22px;
+    margin-top:30px;
+    font-family: "AnzianoRegular";
+}
+
+.button{
+    margin-top:20px;
+    background-color:white;
+    padding:2px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap:16px;
+    width:260px;
+    height:60px;
+    color:black;
+    font-size:17px;
+    border:1px solid gray;
+    border-radius:12px;
+}
+.button:hover{
+    transform: scale(102%);
+    cursor:pointer;
+    transition-duration: 300;
+    
+}

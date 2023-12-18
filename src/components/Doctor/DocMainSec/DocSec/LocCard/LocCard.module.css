@@ -1,0 +1,77 @@
+.LocCard {
+    min-width: 280px;
+    border: 1px solid rgb(165, 161, 161);
+    padding: 1% 1.5%;
+    margin-right: 5%;
+    border-radius:10px;
+    margin-bottom:1%;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.LocCard:hover {
+    border-color: #000066;
+}
+
+.Heading{
+    font-weight: bold;
+    font-size: 16px;
+    color: #6BB4C5;
+}
+
+.Heading img{
+    margin-right: 8px;
+}
+
+.LocCard p {
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.LocCard>div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+}
+
+.Info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.Timing{
+    color: rgb(82, 78, 78);
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+
+
+.LocCard span {
+    color: #2A872E;
+
+}
+
+.Info>p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.Info>p:last-child{
+    font-weight: bold;
+    margin-left: 20%;
+
+}
+
+.CircleIcon{
+    width: 8px;
+    height: 8px;
+    margin-right:10px;
+    border-radius: 50%;
+    background-color: #79B654;
+}
+

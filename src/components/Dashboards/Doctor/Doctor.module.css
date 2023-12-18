@@ -1,0 +1,53 @@
+.Container {
+  background-color: aliceblue;
+  display: grid;
+  position: relative;
+  grid-template-columns: 240px auto;
+  min-height: 100vh;
+}
+.logo {
+  height: 110%;
+  width: 90%;
+  /* margin-right: 10%; */
+}
+.logoBox {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.leftMain {
+  background-color: #325f8b;
+  padding: 20px;
+  background-image: url(//img.wbmdstatic.com/webmd_static_vue/091e9c5e81bf2122/img/bg-profile@2x.ae59762c.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.img {
+  border-radius: 999px;
+  width: 140px;
+  height: 140px;
+  border: 6px solid white;
+  object-fit: cover;
+}
+.InfoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.NavBox {
+  margin-top: 40px;
+}

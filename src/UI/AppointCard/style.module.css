@@ -1,0 +1,22 @@
+.card {
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.CardColumn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  @media (max-width: 767px) {
+    flex-direction: row;
+  }
+}
+
+.headMain {
+  font-size: 20px;
+  font-weight: bold;
+  @media (max-width: 425px) {
+    font-size: 18px;
+  }
+}

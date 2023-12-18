@@ -1,0 +1,174 @@
+.main{
+    background-color: white;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:10px ;
+    padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inputMainBox{
+    display: grid;
+    gap:40px;
+    grid-template-columns: auto auto auto;
+}
+.main h2{
+    font-size: 32px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 16px;
+}
+.main p{
+    /* font-size: 32px; */
+    /* font-weight: bold; */
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 30px;
+}
+.btnRight{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.btnLeft{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.btnBox{
+    display: flex;
+}
+.ContentBox{
+    overflow-y:scroll;
+    display: flex;
+    padding-right:10px ;
+    max-height:70vh;
+    flex-direction: column;
+    align-items: space-between;
+}
+.ContentBox::-webkit-scrollbar{
+    background-color: transparent;
+    width: 6px; 
+    height: 6px; 
+
+}
+
+.ContentBox::-webkit-scrollbar-track{
+    background-color: transparent;
+
+}
+.ContentBox::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 6px;
+    width: 6px; 
+}
+
+.ContentBox::-webkit-scrollbar-thumb:hover{
+    background-color: gray;
+}
+.addRemoveButtonBox{
+    margin-top: 20px;
+    display: flex;
+    gap:80px;
+    justify-content: center;
+}
+
+.timeBox p{
+    height:80%;
+    min-width: 160px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.timeBox{
+    margin-bottom:10px;
+    display: flex;
+    height: 60px;
+}
+input{
+    height: 16px;
+    width: 16px;
+}
+.closeBox{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:center;
+    align-items: center;
+    gap:10px;
+    font-size: 18px;
+    min-width: 100px;
+    height:40px;
+}
+.timingHeading{
+    margin: 20px 0px;
+    font-weight: bold;
+    text-decoration:underline;
+}
+
+
+.para2{
+    text-align: center;
+    height:60%;
+    min-width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.WorkInClinicBtnBox{
+   display: flex;
+   gap:20px;
+}
+.WorkInClinicBtn:hover{
+    cursor:pointer;
+    transform: scale(1.04);
+}
+.WorkInClinicBtn2:hover{
+    cursor:pointer;
+    transform: scale(1.04);
+}
+.WorkInClinicBtn{
+    height:20px;
+    width:40px;
+    text-align: center;
+    padding:4px;
+    border-radius: 12px;
+    color:#1976d2;
+    border:2px solid #1976d2;
+    box-shadow: 6px 6px 20px -7px rgba(0,0,0,0.69);
+}
+.WorkInClinicBtn2{
+    height:20px;
+    color:white;
+    width:40px;
+    text-align: center;
+    padding:4px;
+    transform: scale(1.04);
+    border-radius: 12px;
+    box-shadow: 10px 11px 30px -7px rgba(0,0,0,0.69);
+    background-color: #1976d2;
+    border:2px solid #1976d2;
+}
+
+.PicBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+}
+.Image{
+    border-radius: 999px;
+    width:220px;
+    height:220px;
+    border:1px solid gray;
+    object-fit: cover;
+}
+
+input[type='file']{
+    width:200px;
+    /* height:80px; */
+    height:fit-content;
+
+}

@@ -1,0 +1,36 @@
+.FAQ {
+    padding:0.8% 3%;
+    margin-bottom:2%;
+    width: 60%;
+    /* background-color: rgb(146, 189, 189); */
+    /* // FAQ.style.backgroundColor = 'rgb(137, 189, 189)'; */
+
+    background-color: #60bbad;
+    border-radius: 50px;
+    box-shadow: 3px 4px 4px #60bbadb7;
+}
+
+.Question{
+    font-weight: 700;
+    margin-bottom: 1.5%; 
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.Question>img {
+    width:20px;
+}
+
+.Answer{
+    line-height: 1.7em;
+    font-size: 14px;
+    margin:0;
+    padding-bottom: 1%;
+    padding-left: 3%;
+    display: none;
+    /* color:#60bbad; */
+}
+
+

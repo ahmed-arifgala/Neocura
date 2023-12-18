@@ -1,0 +1,60 @@
+.FlipCard {
+    background-color: transparent;
+    width: 200px;
+    height: 70px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.FlipCard img {
+    padding: 0% 2%;
+}
+
+.Title {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+  
+.FlipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+/* .FlipCard:hover .FlipCardInner {
+    transform: rotateY(180deg);
+} */
+  
+.FlipCardFront, .FlipCardBack {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgb(6, 22, 46);
+    border-radius: 1rem;
+
+}
+  
+.FlipCardFront {
+    background: linear-gradient(120deg, rgb(115, 171, 194) 60%, rgb(135, 172, 214) 88%,
+    rgb(85, 156, 189) 40%, rgb(22, 39, 58) 48%);
+    color: rgb(6, 22, 46);
+}
+  
+.FlipCardBack {
+    background: linear-gradient(120deg, rgb(88, 125, 167) 30%, rgb(22, 39, 58)  88%,
+    rgb(22, 39, 58) 40%, rgb(115, 171, 194) 78%);
+    color: white;
+    transform: rotateY(180deg);
+}

@@ -1,0 +1,22 @@
+.LeftSideSec{
+    width: 55%;
+    margin-right: 8%;
+    /* background-color: aliceblue; */
+    margin-left: 4%;
+    color: #2c2c31;
+}
+
+.ReviewOverview{
+    display: flex;
+    margin-top: 7%;
+}
+
+.ReviewOverview>h1{
+    margin: 0;
+    padding-left: 2%; ;
+}
+
+.ReviewOverview>img{
+    height:24px;
+    width: 24px;
+}

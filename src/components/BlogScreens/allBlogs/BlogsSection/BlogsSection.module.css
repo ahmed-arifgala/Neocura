@@ -1,0 +1,22 @@
+.mainContainer{
+    margin-top:100px;
+}
+.blogContainer{
+    display: flex;
+    justify-content: space-between;
+    gap:70px 20px;
+    flex-wrap:wrap;
+}
+.Heading{
+    display: flex;
+    align-items: center;
+    gap:30px;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Line{
+    width: 89%;
+    height:3px;
+    border-radius: 8px;
+    background-color: gray;
+}

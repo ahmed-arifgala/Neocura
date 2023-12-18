@@ -1,0 +1,10 @@
+.ImageButton>button{
+    border:none;
+    background: none;
+    padding: 0;
+}
+
+.ImageButton {
+    text-align: center;
+    margin-bottom: 5%;
+}

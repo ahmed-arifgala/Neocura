@@ -1,0 +1,109 @@
+.Toolbar{
+    height: 64px;
+    width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0 20px;
+    box-sizing: border-box; */
+    z-index: 90;
+    /* position: fixed; */
+    /* opacity: 0.8; */
+    /* backdrop-filter:blur(2px); */
+    /* background-color: #042343ff; */
+}
+
+.Toolbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Toolbar h1 {
+  margin: 0% 4% 0% 2%;
+  width: 15%;
+}
+
+
+.Toolbar nav{
+    /* position: absolute;  */
+    z-index: 9999;
+    height: 100%;
+    width: 50%;
+
+}
+
+.logo{
+    height: 100%;
+    width:80%;
+    /* margin-right: 10%; */
+}
+
+.Logo h1 {
+  margin: 0;
+  padding: 0;
+  margin-right: 0;
+}
+
+
+.Button {
+  --color: #00A97F;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+ .Button::before, .Button::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .Button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .Button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .Button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .Button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .Button:active {
+  filter: brightness(.8);
+ }
+ 

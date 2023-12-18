@@ -1,0 +1,27 @@
+.Doctor{
+    background-color: rgb(236, 248, 248);
+    color: #2c2c31;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100vw;
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.Header{
+    color: #2c2c31;
+    background-color: white;
+    margin-top:5%;
+    margin-bottom: 2%;
+    overflow-x: hidden;
+
+}
+
+.Header h1{
+    padding-left: 3%;
+    padding-top:2%;
+    padding-bottom: 2%;
+    margin:0;
+}
