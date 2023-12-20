@@ -1,68 +1,52 @@
-import React, { useState, useEffect } from "react";
-import Chart from "react-apexcharts";
+import React, { useState } from 'react';
+import classes from './Profile.module.css';
+import docImage from '../../../../assets/images/docImgs/doc44.png';
 
-const ImpressionsGraph = ({ impression, click }) => {
-  const [impressionsData, setImpressionsData] = useState([]);
-  const [clicksData, setClicksData] = useState([]);
-  const [options] = useState({
-    chart: {
-      id: "impressions-clicks-chart",
-    },
-    xaxis: {
-      categories: [], // Dates will be set here
-    },
+const Profile = () => {
+  const [profileInfo, setProfileInfo] = useState({
+    'Name': 'Ali Hassan',
+    'Email': 'ali.hassan@gmail.com',
+    'Location': 'Karachi',
+    'Phone Number': '033293829442'
   });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const currentDate = new Date();
-      const dates = [];
-      const impressions = [10, 20, 30];
-      const clicks = [1, 2, 5];
 
-      // Generate dates for the past 7 days
-      for (let i = 6; i >= 0; i--) {
-        const date = new Date(currentDate);
-        date.setDate(currentDate.getDate() - i);
-        dates.push(formatDate(date)); // Format date to 'yyyy-mm-dd'
-        const fetchedImpressions = { impression }.impression; // Replace with actual API call for impressions
-        const fetchedClicks = { click }.click; // Replace with actual API call for clicks
-
-        impressions.push(fetchedImpressions);
-        clicks.push(fetchedClicks);
-      }
-
-      setImpressionsData(impressions);
-      setClicksData(clicks);
-      options.xaxis.categories = dates;
-    };
-
-    fetchData();
-  }, [{ impression }, { click }]); // Empty dependency array ensures the effect runs once after the initial render.
-
-  // Format a date to 'yyyy-mm-dd' format
-  const formatDate = (date) => {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
-    return `${year}-${month}-${day}`;
+  const renderInfoItems = () => {
+    return Object.entries(profileInfo).map(([key, value]) => (
+      <div key={key} className={classes.InfoItem}>
+        <p className={classes.Label}>{key}:</p>
+        <p className={classes.Value}>{value}</p>
+      </div>
+    ));
   };
 
-  return (
-    <div>
-      <h2 className="font-bold text-2xl">Impressions and Clicks Over Time</h2>
 
-      <Chart
-        options={options}
-        series={[
-          { name: "Impressions", data: impressionsData },
-          { name: "Clicks", data: clicksData },
-        ]}
-        type="line"
-        height={350}
-      />
+
+  return (
+    <div className={classes.Profile}>
+      <div className={classes.Left}>
+        <div className={classes.ProfileInfo}>
+          <div className={classes.Image}>
+            <img src={docImage} alt="Doctor's Image" />
+          </div>
+          
+          <div className={classes.InfoContainer}>
+            {renderInfoItems()}
+            
+            </div>
+
+
+        </div>
+      </div>
+      <div className={classes.Right}>
+
+          <h1>Hi {profileInfo.Name}!</h1>
+          <p>This is your Profile Page. <br /> Here you can view your Personal Details and Details of Appointments.</p>
+
+
+      </div>
     </div>
   );
 };
 
-export default ImpressionsGraph;
+export default Profile;
