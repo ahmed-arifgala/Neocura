@@ -1,0 +1,93 @@
+.Left{
+    color: #2c2c31;
+    width: 45%;
+    margin:7% 4% auto 5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(53, 52, 52);
+    background-color: white;
+    
+
+}
+
+.Profile{
+    display: flex;
+    
+}
+
+.Right{
+    color: #2c2c31;
+    width: auto;
+    margin-right: 5%;
+    text-align: center;
+    margin-top: 7%;
+    font-family: "Crimson Text";
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Right>h1{
+    margin-bottom:6%;
+    font-size: 300%;
+    letter-spacing: .1em;
+    text-shadow: 1px 2px 2px #2c2c31bd;
+    font-style: italic;
+}
+
+.Right>p{
+    line-height: 3em;
+    font-size: 110%;
+}
+
+
+.Left:hover{
+    border: 3px solid #2e4b86;
+   
+}
+
+
+.ProfileInfo{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7% 0;
+    
+    
+}
+
+.Image{
+    margin-right: 5%;
+    margin-top: 3%;
+    position: relative;
+    z-index: 1;
+    background-color: #6BB4C5;
+    border-radius: 50%;
+    width:140px;
+    height: 140px;
+}
+
+
+.InfoItem {
+    display: flex;
+    margin-bottom: 18px; 
+  }
+
+  .Label {
+    width: 100px; 
+    text-align: left;
+    margin-right: 15%;
+    font-weight: bold;
+  }
+  
+  .Value {
+    text-align: left;
+  }
+
+  .InfoContainer{
+    margin-top: 7%;
+    width: 60%;
+  }

@@ -99,30 +99,5 @@ const Router = createBrowserRouter([
   { path: "/signup/patient", element: <PatientSignUp /> },
 ]);
 
-// const Router = () => {
-//   return (
-//     <BrowserRouter>
-//         <Routes>
-//             <Route path="/" element={<Home/>}/>
-//             <Route path="/login" element={<LoginPage/>}/>
-//             <Route path="/resetPassword" element={<ResetPass/>}/>
-//             <Route path="/signup" element={<SignupPage/>}/>
-//             <Route path="/signup/doctor" element={<DoctorSignUp/>}/>
-//             <Route path="/signup/patient" element={<PatientSignUp/>}/>
-//             <Route path="patientId/dashboard/*" element={<PatientDashboard/>}/>
-//             <Route path="doctorId/dashboard/*" element={<DoctorDashboard/>}/>
-//             <Route path="/indivDoc" element={<DoctorList/>}/>
-//             <Route path="/booking" element={<BookAppointment/>}/>
-//             <Route path="/videoConsultation" element={<VideoConsultation/>}/>
-//             <Route path="/blogs" element={<AllBlogs/>}/>
-//             <Route path= '/Doctor' element= {<Doctor />}/>
-//             {/* <Route path= '/Doctor/:leftItem/:rightItem/:cityName' element= {<Doctor />}/> */}
-//             <Route path="/blogs/:id" element={<SingleBlog/>}/>
-//             <Route path='Hospital/:leftItem/:rightItem' element= {<Hospital />}/>
-//             <Route path="*" element={<ErrorPage/>}/>
 
-//         </Routes>
-//     </BrowserRouter>
-//   )
-// }
 export default Router;
