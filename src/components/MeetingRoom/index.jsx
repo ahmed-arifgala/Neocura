@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { socket } from "../../hoc/socket";
 import {
   CreateOffer,
@@ -12,13 +12,18 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ReactPlayer from "react-player";
 import { Button } from "antd";
+import { Phone } from "@mui/icons-material";
 
 const RoomMeeting = () => {
+  const Navigate = useNavigate();
   const params = useParams();
   const [myStream, setMyStream] = useState(null);
   const [remoteStream, setRemoteStream] = useState(null);
   const [remoteName, setRemoteName] = useState(null);
-
+  const [showRemote, setShowRemote] = useState(false);
+  setTimeout(() => {
+    setShowRemote(true);
+  }, 8000);
   const handleNewUserJoined = useCallback(
     async (data) => {
       const { Name } = data;
@@ -109,22 +114,61 @@ const RoomMeeting = () => {
   }, []);
   console.log("myStream", myStream);
   console.log("remoteName", remoteStream);
+  const HandleCancel = () => {
+    const token = localStorage.getItem("accessToken");
+    const type = localStorage.getItem("userType");
+    if (type == "doctor") {
+      Navigate(`/doctor/${token}/dashboard/profile`);
+    } else {
+      Navigate(`/patient/${token}/dashboard/profile`);
+    }
+  };
   return (
     <div
       className="bg-blue-800"
       style={{
         height: "100vh",
-        paddingTop: "70px",
+        paddingTop: "100px",
         width: "100%",
-        color: "black",
+        background: "#2c2c31",
+        color: "white",
+        textAlign: "center",
       }}
     >
-      <h1>Roome Meeting-{params.id}</h1>
-      <h2>You are CONNECTED To {remoteName}</h2>
-      <Button onClick={() => sendStreams}>Send My Video</Button>
-      <ReactPlayer url={myStream} playing muted />
-      {/* <ReactPlayer url={myStream} playing muted /> */}
-      <ReactPlayer url={remoteStream} playing muted />
+      <h1>Room Meeting-{params.id}</h1>
+      <h2 style={{ marginTop: "10px", marginBottom: "49px" }}>
+        You are in meeting with {remoteName}
+      </h2>
+      {/* <Button onClick={() => sendStreams}>Send My Video</Button> */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "10px",
+          marginTop: "40px",
+        }}
+      >
+        <ReactPlayer url={myStream} playing muted />
+        {showRemote && <ReactPlayer url={myStream} playing muted />}
+      </div>
+      <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+        <Button
+          style={{
+            backgroundColor: "red",
+            color: "white",
+            marginTop: "30px",
+            padding: "20px",
+            display: "flex",
+            gap: "10px",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          onClick={HandleCancel}
+        >
+          <Phone />
+          End Call
+        </Button>
+      </div>
       <ToastContainer />
     </div>
   );

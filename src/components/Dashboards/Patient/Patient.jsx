@@ -36,12 +36,12 @@ const Patient = () => {
     //   path: "todayAppointments",
     // },
     {
-      name: "Requested Appoint",
+      name: "Requested Appointment",
       icon: <DuoIcon />,
       path: "appoint-requests",
     },
     {
-      name: "Approved Appoints",
+      name: "Approved Appointment",
       icon: <ReviewsIcon />,
       path: "approved-appointments",
     },
@@ -62,7 +62,7 @@ const Patient = () => {
               <img src={logo} className={classes.logo} />{" "}
             </Link>
             <div className={classes.InfoBox}>
-              <img
+              {/* <img
                 src={
                   UserData?.img == "pat1"
                     ? pat1
@@ -72,12 +72,12 @@ const Patient = () => {
                 }
                 className={classes.img}
               />
-              <p>{UserData.name}</p>
+              <p>{UserData.name}</p> */}
             </div>
             <div className={classes.NavBox}>
               {NavItems.map((e, i) => (
                 <Button
-                  size="small"
+                  // size="small"
                   startIcon={e.icon}
                   onClick={() => {
                     setSelected(i);
@@ -102,7 +102,13 @@ const Patient = () => {
 
           <Button
             size="small"
-            sx={{ color: "white", width: "100%", fontFamily: "Helvetica" }}
+            sx={{
+              color: "white",
+              width: "100%",
+              marginBottom: "20px",
+
+              fontFamily: "Helvetica",
+            }}
             startIcon={<LogoutIcon />}
             onClick={() => {
               localStorage.clear();

@@ -45,14 +45,10 @@ const LoginPage = () => {
           localStorage.setItem("userData", JSON.stringify(response.data.data));
 
           setTimeout(() => {
-            if (response.data.type == "admin") {
-              Navigate(`/admin/${response.data.accesToken}/dashboard/profile`);
-            } else if (response.data.type == "doctor") {
+            if (response.data.type == "doctor") {
               Navigate(`/doctor/${response.data.accesToken}/dashboard/profile`);
             } else if (response.data.type == "patient") {
-              Navigate(
-                `/patient/${response.data.accesToken}/dashboard/profile`
-              );
+              Navigate(`/`);
             } else {
               console.log("error");
             }

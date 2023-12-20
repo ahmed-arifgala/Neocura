@@ -17,6 +17,8 @@ const DocSec = ({ data }) => {
   // const { socket } = useSocket();
   const [PatData, setPatData] = useState();
   const Navigate = useNavigate();
+  const data2 = localStorage.getItem("userData");
+  const UserData = JSON.parse(data2);
   useEffect(() => {
     socket.on("joined-room", ({ roomId }) => {
       Navigate(`/meeting-room/${roomId}`);
@@ -27,7 +29,7 @@ const DocSec = ({ data }) => {
     let roomId = Math.floor(100000 + Math.random() * 900000);
     socket.emit("join-room", {
       roomId: roomId,
-      Name: "Dr Talal",
+      Name: UserData.name,
     });
     const res = await axios.post(
       "http://localhost:5000/onlineBooking/UpdateRoomId",

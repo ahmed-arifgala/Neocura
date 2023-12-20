@@ -2,7 +2,7 @@
   background-color: aliceblue;
   display: grid;
   position: relative;
-  grid-template-columns: 240px auto;
+  grid-template-columns: 280px auto;
   min-height: 100vh;
 }
 .logo {
@@ -21,7 +21,7 @@
 .leftMain {
   background-color: #325f8b;
   padding: 20px;
-  background-image: url(//img.wbmdstatic.com/webmd_static_vue/091e9c5e81bf2122/img/bg-profile@2x.ae59762c.jpg);
+  background-image: url("../../../assets/images/dashboardBg.avif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

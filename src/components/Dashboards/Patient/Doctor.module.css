@@ -2,7 +2,7 @@
   background-color: aliceblue;
   display: grid;
   position: relative;
-  grid-template-columns: 240px auto;
+  grid-template-columns: 280px auto;
   height: 100vh;
 }
 .logo {
