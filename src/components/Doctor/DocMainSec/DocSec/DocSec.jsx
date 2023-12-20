@@ -94,7 +94,7 @@ const DocSec = ({ docInfo, locData }) => {
           to={{
             pathname: `/${docInfo.name}/booking`,
           }}
-          state={{ docInfo, locData }}
+          state={{ docInfo, locData, docId: docInfo.docId }}
         >
           <IconButton id="consultation" passedClass={classes.Button2}>
             Book Appointment

@@ -164,13 +164,13 @@ const BookAppointment = (props) => {
       });
       return;
     }
-
+    console.log("object,Data?.docId", Data?.docId);
     axios
       .post("http://localhost:5000/onlineBooking", {
-        docId: 20,
-        patId: 10,
-        date: "28-7-29",
-        time: "4:20pm",
+        docId: Data?.docId,
+        patId: localStorage.getItem("userId"),
+        date: `${selectedDate} ${selectedMonth}, ${new Date().getFullYear()}`,
+        time: selectedTime,
         status: "pending",
       })
       .then((res) => {
@@ -179,7 +179,7 @@ const BookAppointment = (props) => {
         });
       })
       .catch((res) => {
-        toast.success("Error !", {
+        toast.error("Error !", {
           position: toast.POSITION.TOP_RIGHT,
         });
       });

@@ -27,6 +27,7 @@ import Layout from "../hoc/Layout/Layout";
 import CompleteList, {
   loader as CompleteListLoader,
 } from "../components/CompleteList/CompleteList";
+import RoomMeeting from "../components/MeetingRoom";
 
 const Router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const Router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
 
+      {
+        path: "meeting-room/:id",
+        element: <RoomMeeting />,
+      },
       {
         path: "Doctor/:leftItem/:rightItem/:cityName",
         element: <Doctor />,

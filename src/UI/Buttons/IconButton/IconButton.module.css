@@ -1,24 +1,38 @@
-.IconButton>button{
-    width: 200px;
-    height: 70%;
-    font-size: 14px;
-    border: 2px solid #000066;
-    border-radius: 8px;
-    padding: 7px 10px;
-    margin-bottom: 8%;
-    color: #000066;
-    background-color: white;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
+.IconButton > button {
+  width: 200px;
+  height: 70%;
+  font-size: 14px;
+  border: 2px solid #000066;
+  border-radius: 8px;
+  padding: 7px 10px;
+  margin-bottom: 8%;
+  color: #000066;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
 }
 
-
-.IconButton>button:hover{
-    cursor: pointer;
-    color: white;
-    background-color: #000066;
-    transform: scale(1.05);
+.IconButton2 > button {
+  width: 200px;
+  height: 70%;
+  font-size: 14px;
+  border: 2px solid #000066;
+  border-radius: 8px;
+  padding: 7px 10px;
+  margin-bottom: 8%;
+  color: red;
+  background-color: darkgreen;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
 }
 
+.IconButton > button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #000066;
+  transform: scale(1.05);
+}
