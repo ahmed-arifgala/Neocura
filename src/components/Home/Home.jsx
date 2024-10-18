@@ -34,7 +34,7 @@ import person4 from '../../assets/images/HomeImages/person4.jpg';
 const Home = () => {
  const Data=[
   {name:"Misbah Khan",tag:"Good",img:person1,content:"It is really good initiative to connect with health care personals. If you feel a need for help then helpline is there to take care of it. overall very good experience.",star:4},
-  {name:"Irfan Muddasir",tag:"Excelletnt",img:person2,content:"My first appointment today.It was a very smooth experience and the skin specialist was very helpful and professional experiences so far facility is also very good.",star:3},
+  {name:"Maha  Muddasir",tag:"Excelletnt",img:person2,content:"My first appointment today.It was a very smooth experience and the skin specialist was very helpful and professional experiences so far facility is also very good.",star:3},
   {name:"Aisha Kiran",tag:"Awsome",img:person3,content:"I got late on my appointment, but after 10 minutes, the doctor called me and prescribed medicines, which is far better than appointing physically and waiting!",star:4},
   {name:"Ahmed Irfan",tag:"Satisfied",img:person4,content:"My first appointment today.It was a very smooth experience and the skin specialist was very helpful and professional experiences so far facility is also very good.",star:3},
   {name:"Aisha Kiran",tag:"Good",img:doc,content:"I got late on my appointment, but after 10 minutes, the doctor called me and prescribed medicines, which is far better than appointing physically and waiting!",star:4},
@@ -54,6 +54,8 @@ const CardData=[
       <div className={classes.SerachBarContainer}>
         <LocationBar />
         <SearchBar />
+
+        <h1 className={classes.Title1}>200+ Doctors Registered</h1>
       </div>
       <Wrapper>
         <div className={classes.Lowersection}>

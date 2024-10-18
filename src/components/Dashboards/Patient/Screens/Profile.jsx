@@ -30,7 +30,7 @@ const Profile = () => {
         <div className={classes.ProfileInfo}>
           <div className={classes.Image}>
             <img
-              height={180}
+              height={170}
               src={
                 UserData?.img == "pat1"
                   ? pat1
